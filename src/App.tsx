@@ -20,7 +20,10 @@ function App() {
   const checkWinner = () => {
     for (const combination of winningCombinations) {
       const [a, b, c] = combination;
-      if (board[a] === board[b] && board[a] === board[c]) {
+
+      console.log(board[a], board[b], board[c])
+
+      if (board[a] && board[a] === board[b] && board[a] === board[c]) {
         setWinner(board[a]);
         return;
       }
